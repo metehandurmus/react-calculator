@@ -14,7 +14,7 @@ function Button({ text, classn, width, type }) {
                         setProcess("");
                     }
                     if(type=="equal-process") {
-                        setProcess(eval(process))
+                        setProcess(eval(process).toString())
                     }
                     if(type=="number" || type=="process") {
                         setProcess(process + text)
