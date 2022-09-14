@@ -1,8 +1,13 @@
+import Calculator from "./components/Calculator";
+import './App.css';
+import { ProcessProvider } from "./context/ProcessContext";
 
 function App() {
   return (
-    <div>
-      App
+    <div className="App">
+      <ProcessProvider>
+        <Calculator />
+      </ProcessProvider>
     </div>
   );
 }
