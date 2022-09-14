@@ -4,7 +4,7 @@ import Button from "./Button"
 
 function Calculator() {
 
-    const {process, setProcess} = useProcess()
+    const {process} = useProcess()
 
     const buttons = [
         {

@@ -7,16 +7,22 @@ function Button({ text, classn, width, type }) {
         <div className={`col-${width}`}>
             <button onClick={
                 () => {
-                    if(type=="delete") {
+                    if(type==="delete") {
                         setProcess(process.slice(0, -1))
                     }
-                    if(type=="reset") {
+                    if(type==="reset") {
                         setProcess("");
                     }
-                    if(type=="equal-process") {
-                        setProcess(eval(process).toString())
+                    if(type==="equal-process") {
+                        try {
+                            const final = eval(process);
+                            setProcess(final.toString())
+                        } catch(e) {
+                            setProcess("Err.")
+                        }
+                        
                     }
-                    if(type=="number" || type=="process") {
+                    if(type==="number" || type==="process") {
                         setProcess(process + text)
                     }
                 }
